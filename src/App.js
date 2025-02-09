@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faGooglePlusG, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './style.css';
+
+library.add(fab, faGooglePlusG, faFacebookF, faGithub, faLinkedinIn);
+
 
 function App() {
   const [active, setActive] = useState(false);
@@ -17,6 +24,12 @@ function App() {
       <div className="form-container sign-up">
         <form>
           <h1>Create Account</h1>
+          <div className="social-icons">
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'google-plus-g']} /></a>
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></a>
+          </div>
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
@@ -26,6 +39,12 @@ function App() {
       <div className="form-container sign-in">
         <form>
           <h1>Sign In</h1>
+          <div className="social-icons">
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'google-plus-g']} /></a>
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
+            <a href="#" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></a>
+          </div>
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <button>Sign In</button>
